@@ -1,0 +1,27 @@
+.craft-search {
+  background-color: #525555;
+  color: white;
+}
+
+.ingredient {
+  background-color: #525555;
+  margin: 10px 0px 10px 0px;
+  color: white;
+  font-size: 18px;
+}
+
+.recipe-list {
+  color: #0B2D50;
+  font-family: Verdana;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.quantity {
+  text-align: right;
+  color: red;
+}
+
+.align-center {
+  text-align: center;
+}
