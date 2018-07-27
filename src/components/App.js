@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <SearchBar />
+        <SearchBar term='Bronze' />
       </React.Fragment>
     );
   }

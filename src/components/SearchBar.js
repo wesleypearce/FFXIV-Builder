@@ -6,10 +6,11 @@ class SearchBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      term: ''
+      term: props.term
     }
 
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   render() {
@@ -19,7 +20,12 @@ class SearchBar extends Component {
           <div className="container">
             <h1 className="display-4">FFXIV Builder</h1>
             <p className="lead">Search for crafting recipes!</p>
-            <input onChange={this.handleInputChange} type="text"/>
+
+            <form>
+              <input onChange={this.handleInputChange} value={this.state.term} type="text"/>
+              <input type="submit" onClick={this.handleSubmit} value="Search!" />
+            </form>
+
           </div>
         </div>
         <RecipeList term={this.state.term}/>
@@ -33,9 +39,11 @@ class SearchBar extends Component {
     )
   }
 
+  handleSubmit() {
+  }
+
   handleInputChange(event) {
     event.preventDefault()
-    console.log(event.target.value)
     this.setState({ term: event.target.value })
   }
 }
